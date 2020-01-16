@@ -5,24 +5,34 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CubeEditor: MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] float gridSize = 10f;
-    TextMesh textMesh;
-    void Start()
-    {
+    WayPoints wayPoints;
 
-        textMesh = GetComponentInChildren<TextMesh>();
-        
+    private void Awake()
+    {
+        wayPoints = GetComponent<WayPoints>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 snap;
-        snap.x = Mathf.RoundToInt(transform.position.x /gridSize) * gridSize;
-        snap.z = Mathf.RoundToInt(transform.position.z /gridSize) * gridSize;
-        textMesh.text = snap.x + "," + snap.z;
-        transform.position = new Vector3(snap.x, 0f, snap.z);
-        
+        SnapGrid();
+        AddLabel();
+    }
+
+    private void AddLabel()
+    {
+        TextMesh textMesh = GetComponentInChildren<TextMesh>();
+        string label = wayPoints.GetGridPos().x + "," + wayPoints.GetGridPos().y;
+        textMesh.text = label;
+        gameObject.name = label;
+    }
+
+    private void SnapGrid()
+    {
+        transform.position = new Vector3(
+            wayPoints.GetGridPos().x,
+            0f,
+            wayPoints.GetGridPos().y
+        );
     }
 }
