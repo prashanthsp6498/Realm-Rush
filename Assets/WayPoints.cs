@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 public class WayPoints : MonoBehaviour
 {
+    public bool isExplored = false;
+
+    [SerializeField] public WayPoints exploredFrom;
     const int gridSize = 1;
 
     public int GetGridSize()
