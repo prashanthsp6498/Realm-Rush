@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    [SerializeField] int hitPoint = 10;
+    [SerializeField] int hitPoint = 200;
     void Start()
     {
         
@@ -12,7 +12,6 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        print("I am hit");
         ProcessHit();
         if (hitPoint <= 0)
         {
@@ -23,6 +22,5 @@ public class EnemyDamage : MonoBehaviour
     private void ProcessHit()
     {
         hitPoint -= 1;
-        print("CUrrent hit point : " + hitPoint);
     }
 }

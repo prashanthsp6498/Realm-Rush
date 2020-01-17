@@ -26,9 +26,12 @@ public class PathFinder : MonoBehaviour
 
     public List<WayPoints> StartToEndPath()
     {
-        LoadBlocks();
-        PathSearch();
-        FindParent();
+        if (pathList.Count == 0)
+        {
+            LoadBlocks();
+            PathSearch();
+            FindParent();
+        }
         return pathList;
     }
 
