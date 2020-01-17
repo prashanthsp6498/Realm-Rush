@@ -12,7 +12,6 @@ public class CubeEditor: MonoBehaviour
         wayPoints = GetComponent<WayPoints>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         SnapGrid();

@@ -16,14 +16,8 @@ public class EnemyMovement : MonoBehaviour
     {
         foreach(WayPoints point in path)
         {
-            print(point.transform.position.x + point.transform.position.y);
             transform.position = point.transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
-    }
-
-    void Update()
-    {
-        
     }
 }
