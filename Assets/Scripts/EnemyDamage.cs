@@ -5,10 +5,7 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] int hitPoint = 200;
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject explosionFx;
 
     private void OnParticleCollision(GameObject other)
     {
@@ -16,11 +13,12 @@ public class EnemyDamage : MonoBehaviour
         if (hitPoint <= 0)
         {
             Destroy(gameObject);
+            explosionFx.SetActive(true);
         }
     }
 
     private void ProcessHit()
     {
-        hitPoint -= 2;
+        hitPoint -= 3;
     }
 }

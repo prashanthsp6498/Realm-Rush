@@ -5,6 +5,7 @@ public class WayPoints : MonoBehaviour
 {
     public bool isExplored = false;
     public bool isPlacable= true;
+    [SerializeField] Tower towerPrefab;
 
     [SerializeField] public WayPoints exploredFrom;
     const int gridSize = 1;
@@ -34,7 +35,7 @@ public class WayPoints : MonoBehaviour
         {
             if (isPlacable)
             {
-                Debug.Log("Placable at : " + gameObject.name + isPlacable);
+                Instantiate(towerPrefab, gameObject.transform.position, Quaternion.identity);
             }
         }
     }

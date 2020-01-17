@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8016417224912980392
 Transform:
   m_ObjectHideFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8016417224912980393}
   m_LocalRotation: {x: 0.04729947, y: -0.014409543, z: 0.0006823969, w: 0.9987766}
-  m_LocalPosition: {x: -1.290001, y: 6.8000026, z: 5.300048}
+  m_LocalPosition: {x: -0.3, y: 6.1, z: 5.3}
   m_LocalScale: {x: 0.09342535, y: 0.035242885, z: 0.375385}
   m_Children: []
   m_Father: {fileID: 8349115203786480413}
@@ -4799,9 +4799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 8349115203786480413}
-  enemy: {fileID: 0}
-  attackRange: 30
-  bullets: {fileID: 0}
+  attackRange: 100
+  bullets: {fileID: 8016417224912980393}
 --- !u!1001 &8345335361105168331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4894,7 +4893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4101459293844584, guid: 8238921bafd389b44921fe80cc7f1f9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.59
+      value: -15.375
       objectReference: {fileID: 0}
     - target: {fileID: 4101459293844584, guid: 8238921bafd389b44921fe80cc7f1f9d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4934,15 +4933,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4101459293844584, guid: 8238921bafd389b44921fe80cc7f1f9d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.20632
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4101459293844584, guid: 8238921bafd389b44921fe80cc7f1f9d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.15
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4101459293844584, guid: 8238921bafd389b44921fe80cc7f1f9d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.15
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8238921bafd389b44921fe80cc7f1f9d, type: 3}
