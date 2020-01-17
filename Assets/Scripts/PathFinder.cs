@@ -38,12 +38,14 @@ public class PathFinder : MonoBehaviour
     private void FindParent()
     {
         var previous = endPoint;
+        previous.isPlacable = false;
         while (previous != startPoint)
         {
+            previous.isPlacable = false;
             pathList.Add(previous);
             previous = previous.exploredFrom;
         }
-
+        startPoint.isPlacable = false;
         pathList.Add(startPoint);
         pathList.Reverse();
     }

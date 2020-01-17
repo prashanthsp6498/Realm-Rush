@@ -4,6 +4,7 @@ using UnityEngine;
 public class WayPoints : MonoBehaviour
 {
     public bool isExplored = false;
+    public bool isPlacable= true;
 
     [SerializeField] public WayPoints exploredFrom;
     const int gridSize = 1;
@@ -29,7 +30,12 @@ public class WayPoints : MonoBehaviour
 
     void OnMouseOver()
     {
-        //If your mouse hovers over the GameObject with the script attached, output this message
-        Debug.Log(gameObject.name);
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isPlacable)
+            {
+                Debug.Log("Placable at : " + gameObject.name + isPlacable);
+            }
+        }
     }
 }
